@@ -2,17 +2,16 @@
 .quiz-page {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; /* Adjust height as needed */
-    /* Add any other styles you need for the quiz page */
+    height: 100vh; 
   }
   
   .concerns-button {
     position: absolute;
-    bottom: 20px; /* Adjust as per your design */
-    left: 50%; /* Center horizontally */
+    bottom: 20px; 
+    left: 50%; 
     transform: translateX(-50%);
     padding: 10px 20px;
-    background-color: #3366cc; /* Example background color */
+    background-color: #e34e4e; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -20,6 +19,6 @@
   }
   
   .concerns-button:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
+    background-color: #fa7d7d; 
   }
   

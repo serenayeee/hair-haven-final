@@ -12,7 +12,7 @@ const Concerns = ({ navigateTo }) => {
         navigateTo('product24');
         break;
       case 'Frizz':
-        navigateTo('product8'); // Navigate to Product8 when clicking on Frizz
+        navigateTo('product8'); 
         break;
       case 'Curl Support':
         navigateTo('curly-hair');

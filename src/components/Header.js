@@ -1,13 +1,13 @@
-// Header.js
 import React, { useState } from 'react';
 import './Header.css';
 
 function Header({ navigateTo }) {
   const [showConcernMenu, setShowConcernMenu] = useState(false);
   const [showHairTypeMenu, setShowHairTypeMenu] = useState(false);
+  const [language, setLanguage] = useState('en'); 
 
   const handleCartClick = () => {
-    navigateTo('cart'); // Navigate to the Cart page
+    navigateTo('cart'); 
   };
 
   const toggleConcernMenu = () => {
@@ -35,7 +35,11 @@ function Header({ navigateTo }) {
   };
 
   const handleQuizClick = () => {
-    navigateTo('quiz'); // Navigate to the Quiz page
+    navigateTo('quiz'); 
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'fr' : 'en');
   };
 
   return (
@@ -52,7 +56,7 @@ function Header({ navigateTo }) {
             <li><a href="#products" onClick={() => navigateTo('products')}>PRODUCTS</a></li>
             <li>
               <div className="dropdown">
-                <a href="#shop-by-concern" onClick={toggleConcernMenu}>SHOP BY CONCERN</a>
+                <a href="#shop-by-concern" onClick={toggleConcernMenu}>SHOP BY NEED</a>
                 {showConcernMenu && (
                   <div className="dropdown-content">
                     <a href="#bleached-hair" onClick={() => handleConcernClick('bleached-hair')}>Bleached Hair</a>
@@ -79,6 +83,11 @@ function Header({ navigateTo }) {
               </div>
             </li>
             <li><a href="#quiz" onClick={handleQuizClick}>QUIZ</a></li>
+            <li>
+              <button onClick={toggleLanguage} className="language-toggle">
+                {language === 'en' ? 'FR' : 'EN'}
+              </button>
+            </li>
           </ul>
         </nav>
         <div className="cart-icon" onClick={handleCartClick}>

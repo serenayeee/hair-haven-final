@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import './Cart.css';
-import Header from './Header'; // Import Header component
+import Header from './Header'; 
 
 function Cart({ navigateTo }) {
-  const [submitted, setSubmitted] = useState(false); // State to track form submission
+  const [submitted, setSubmitted] = useState(false); 
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
+    event.preventDefault(); 
 
-    // Perform any necessary form validation here
-
-    // Assuming validation is successful, proceed to submission success state
     setSubmitted(true);
   };
 
@@ -21,15 +18,33 @@ function Cart({ navigateTo }) {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="example: first and last name"
+            />
           </div>
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required 
+              placeholder="example: (123) 123-1234"
+            />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="example: firstname.lastname@gmail.com"
+            />
           </div>
           <button type="submit" className="cart-submit-button">Submit Order</button>
         </form>
